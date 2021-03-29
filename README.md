@@ -1,7 +1,10 @@
 # Todo App
----
+
 Todo App is an responsive application to save your items and delete them as they are completed
 
+You can check this app by this url https://joaoldx.github.io/todo-vanilla/
+
+---
 ### Requiriments
 None :wink:
 
