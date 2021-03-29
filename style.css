@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #303f9f;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title {
+	font-size: 82px;
+	color: #fff;
+	margin: 10px;
+}
+
+.textInput {
+	font-size: 18px;
+	color: #757575;
+}
+
+.inputContainer {
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: 1fr 0.5fr;
+}
+
+.button {
+	background-color: #ff0404;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+	transition: all 250ms ease-in-out, transform 150ms ease;
+}
+
+.button:hover {
+	background-color: #ff5252;
+	color: #000;
+	text-decoration: underline;
+}
+
+.todoContainer {
+	list-style-position: inside;
+	margin-top: 20px;
+	width: 375px;
+}
+
+.todoContainer:not(:empty) {
+	box-shadow: 0px 0px 5px 5px #bdbdbd;
+}
+
+.li {
+	border-bottom: 1px dotted transparent;
+	border-top: 1px dotted transparent;
+	color: #fff;
+	font-size: 18px;
+	margin: 15px 0;
+	padding: 5px 10px;
+	transition: all 250ms ease-in-out, transform 150ms ease;
+	word-wrap: break-word;
+}
+
+.li:hover {
+	border-bottom: 1px dashed #999999;
+	border-top: 1px dashed #999999;
+	cursor: pointer;
+	text-decoration: underline;
+}
