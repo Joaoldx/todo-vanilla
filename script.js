@@ -43,14 +43,20 @@ const onSaveTodo = (e) => {
   }
 }
 
-const save = (text) => {
-  const todoContainer = document.querySelector('#todoContainer')
+const createLi = (text) => {
   const newLi = document.createElement('li')
 
   newLi.classList.add('li')
-  newLi.innerText = text.value
+  newLi.innerText = text
   newLi.addEventListener('click', () => onRemoveTodo(newLi))
 
+  return newLi
+}
+
+const save = (text) => {
+  const todoContainer = document.querySelector('#todoContainer')
+
+  const newLi = createLi(text.value)
   todoContainer.appendChild(newLi)
   storeTodo(text.value)
   text.value = ''
@@ -78,12 +84,7 @@ const storeTodo = (todo) => {
 const loadStore = () => {
   const todoContainer = document.querySelector('#todoContainer')
   JSON.parse(localStorage.getItem('todos')).forEach(item => {
-    const newLi = document.createElement('li')
-
-    newLi.classList.add('li')
-    newLi.innerText = item
-    newLi.addEventListener('click', () => onRemoveTodo(newLi))
-
+    const newLi = createLi(item)
     todoContainer.appendChild(newLi)
   })
 }
