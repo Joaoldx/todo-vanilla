@@ -83,7 +83,7 @@ const storeTodo = (todo) => {
 
 const loadStore = () => {
   const todoContainer = document.querySelector('#todoContainer')
-  JSON.parse(localStorage.getItem('todos')).forEach(item => {
+  JSON.parse(localStorage.getItem('todos')).reverse().forEach(item => {
     const newLi = createLi(item)
     todoContainer.appendChild(newLi)
   })
